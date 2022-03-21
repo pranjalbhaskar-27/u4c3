@@ -48,7 +48,8 @@ const Book = mongoose.model("book",bookSchema);
 const publicationSchema = new mongoose.Schema(
     {
         name:{type:String, required:true},
-        bookId:{type:mongoose.Schema.Types.ObjectId,ref:"book", required:false}
+        bookId:{type:mongoose.Schema.Types.ObjectId,ref:"book", required:false},
+        timestamps:{type:String,required:true}
     },
     {
         versionKey:false,
